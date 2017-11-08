@@ -166,8 +166,28 @@
   注意:命令git rm用于删除一个文件。如果一个文件已经被提交到版本库，那么你永远不用担心误删，但是要小心，你只能恢复文件到最新版本，你会丢失最近一次提交后你修改的内容
 
 ## 添加远程库
+  将本地项目通过ssh  push到github:  
+  1. 在Github中创建一个新仓储  
+  
+  2. 复制新仓储的ssh地址
+  
+  3. 创建本地项目，并在根目录中运行`git init`初始化
+  
+  4. 在项目根目录中使用`touch ***`创建`README.md`和`.gitignore`文件
+  
+  5. 运行`git add .`
+  
+  6. 运行`git commit -m "init git files"`
+  
+  7. 运行`git remote add origin "粘贴复制test ssh 
+  key的ssh路径"`
+  
+  8. 运行`git push -u origin master`
 
 ## 从远程库克隆
+1. 在Github上创建有`LICENSE`和`README.md`的文件
+
+2. 使用`git clone ssh仓储地址`直接将项目克隆到本地
 
 ## 创建与合并分支(案例实现有问题)
 
@@ -203,18 +223,6 @@
 
 ## GitHub
 
-    生产公钥和私钥 ssh-keygen -t rsa -C "your_email@example.com"
-    1
-
 ## 使用码云
-
-
-
-
-
-
-
-
-
-## 转载来源
+## 参考来源
 [廖雪峰GIT教程](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000 "git教程")
