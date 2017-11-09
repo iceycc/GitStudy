@@ -50,7 +50,7 @@
   > 在Linux上安装Git
 
     1. 如果碰到Ubuntu或Debian 请使用下面命令:
-       
+
        $ git  //这条命令检查系统中是否有Git
 
        sudo apt-get install git  // 如果没有,则使用这条命令来进行安装Git
@@ -79,10 +79,10 @@
 
     # 打开命令行工具,输入命令 代表新建了一个名字为Git的文件夹
       mkdir  Git     
-
+    
     # 进入Git文件夹中
       cd Git
-
+    
     # 查看该文件夹的绝对位置(在windows中) **如果看到输入的pwd中有中文 请确保你的路径中没有中文**
       pwd
 
@@ -90,7 +90,7 @@
 
     # 初始化仓库
       git init   
-
+    
     # 如果你的文件夹中没有任何内容将会得到如下输出结果 代表是初始化了一个空的Git仓库
       Initialized empty Git repository in G:/Git/.git/
 
@@ -99,7 +99,7 @@
 
     # 把要提交的文件添加到版本库
       git add 文件名
-
+    
     # 把要提交的文件提交到版本库
       git commit -m  "本次提交的说明" 
 
@@ -118,10 +118,10 @@
       git reflog
 
   > 5. 回到某一次的提交
-    
+
     # 回到某一次提交就要找到某一次提交的id ,使用fit reflog可以查看自己的命令id
       git reset --hard id号
-      
+
 ## 工作区和暂存区
 
   > 名词解释
@@ -151,7 +151,7 @@
       2. git checkout -- file
 
 ## 删除文件
-  
+
   > 1.确实要删除
 
     git rm 把文件删掉
@@ -168,21 +168,29 @@
 ## 添加远程库
   将本地项目通过ssh  push到github:  
   1. 在Github中创建一个新仓储  
-  
+
   2. 复制新仓储的ssh地址
-  
+
   3. 创建本地项目，并在根目录中运行`git init`初始化
-  
+
   4. 在项目根目录中使用`touch ***`创建`README.md`和`.gitignore`文件
-  
+
   5. 运行`git add .`
-  
-  6. 运行`git commit -m "init git files"`
-  
+
+  6. 运行`git commit -m "init git files"` 
+
   7. 运行`git remote add origin "粘贴复制test ssh 
-  key的ssh路径"`
-  
-  8. 运行`git push -u origin master`
+      key的ssh路径"`
+
+  8. 如果显示fatal: remote origin already exists ,说明已经这个库之间添加过一个库的ssh,要先进行以下代码清除原有的记录
+
+      ```
+       git remote rm origin
+      ```
+
+      ​
+
+  9. 运行`git push -u origin master`
 
 ## 从远程库克隆
 1. 在Github上创建有`LICENSE`和`README.md`的文件
@@ -206,7 +214,7 @@
   > 4.合并某分支到当前分支
 
     git merge 分支名字
-  
+
   > 5.删除分支
 
     git branch -d 分支名字
